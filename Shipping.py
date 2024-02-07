@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": "# Shipping Company\nchecking which option is cheaper",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "weight = 8\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": 1
+    },
+    {
+      "cell_type": "code",
+      "source": "# ground shipping\nif weight <= 2:\n  cost_ground = 20 + (weight * 1.5)\nelif 2 < weight <= 6:\n  cost_ground = 20 + (weight * 3)\nelif 6 < weight <= 10:\n  cost_ground = 20 + (weight * 4)\nelse:\n  cost_ground = 20 + (weight * 4.75)  \n\nprint(\"Ground Shipping $\", cost_ground)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Ground Shipping $ 52\n",
+          "output_type": "stream"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "cell_type": "code",
+      "source": "# Premium ground shipping\ncost_ground_premium = 125.00\n\nprint(\"Ground Shipping Premimium $\", cost_ground_premium)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Ground Shipping Premimium $ 125.0\n",
+          "output_type": "stream"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "cell_type": "code",
+      "source": "# drone shipping\nif weight <= 2:\n cost_drone = weight * 4.5\nelif 2 < weight <= 6:\n cost_drone = weight * 9\nelif 6 < weight <= 10:\n cost_drone = weight * 12\nelse:\n  cost_drone = weight * 14.25\n\nprint(\"Drone Shipping: $\", cost_drone)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Drone Shipping: $ 96\n",
+          "output_type": "stream"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
